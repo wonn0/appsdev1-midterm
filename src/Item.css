@@ -1,0 +1,13 @@
+.item-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.item-name {
+    flex: 1;
+}
+
+.item-button {
+    margin: 0rem 2rem 0rem 2rem;
+
+}
