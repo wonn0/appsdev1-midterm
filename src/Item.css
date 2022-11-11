@@ -3,10 +3,14 @@
   flex-direction: row;
   margin-top: 1rem;
   border-radius: 0.2rem;
+  padding: 0.2rem 0.6rem;
+  box-shadow: 9px 10px 26px -4px rgba(0,0,0,0.27);
+  -webkit-box-shadow: 9px 10px 26px -4px rgba(0,0,0,0.27);
+  -moz-box-shadow: 9px 10px 26px -4px rgba(0,0,0,0.27);
 }
 
-.item-name {
-  flex: 1;
+.button-container {
+  align-self: center;
 }
 
 .item-button {

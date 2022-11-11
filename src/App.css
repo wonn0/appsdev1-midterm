@@ -41,13 +41,21 @@ button {
   white-space: nowrap;
 }
 
-button:hover,
-button:focus {
-  background-color: #07c;
+input[type=text] {
+  flex: 1;
+  border-top-left-radius: 3px !important;
+  border-bottom-left-radius: 3px !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  border: transparent !important;
+  border-color: transparent !important;
+  background-color: #d9d9d9 !important;
+  padding: 0.2rem;
 }
 
-button:focus {
-  box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+input[type=text]:hover,
+input[type=text]:focus {
+  outline: 0;
 }
 
 .container {
@@ -75,10 +83,6 @@ button:focus {
   align-items: center;
 }
 
-.form-input {
-  flex: 1;
-}
-
 .title {
   text-align: center;
 }
@@ -87,7 +91,6 @@ button:focus {
   margin-top: 2rem;
   padding: 0.6rem;
 }
-
 
 .submit-button {
   border-top-left-radius: 0 !important;
