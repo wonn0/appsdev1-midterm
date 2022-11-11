@@ -14,7 +14,7 @@ const getLocalStorage = () => {
 };
 
 function App() {
-  const [showAlert, setShowAlert] = useState(true);
+  const [showAlert, setShowAlert] = useState(false);
   const [message, setMessage] = useState("");
   const [mode, setMode] = useState("add");
   const [index, setIndex] = useState();
@@ -40,7 +40,7 @@ function App() {
     if (mode === "add") {
       setItems((existingItems) => [...existingItems, currentName]);
       setShowAlert(true);
-      setMessage(`${currentName} added`);
+      setMessage(`${currentName} was added to the list`);
       setCurrentName("");
       return;
     }
@@ -72,24 +72,21 @@ function App() {
 
   return (
     <div className="container">
-      {showAlert && (
-        <div>
-          <Alert message={message} />
-        </div>
-      )}
-      <div className="card">
-        <p className="title">Grocery Bud</p>
-        <form onSubmit={handleSubmit}>
+      {showAlert && <Alert message={message} />}
+      <div className="input-container">
+        <h1 className="title">Grocery Bud</h1>
+        <form className="form-container" onSubmit={handleSubmit}>
           <input
             type="text"
+            className="form-input"
             value={currentName}
             onChange={(x) => onChange(x.target.value)}
             placeholder="Enter item name here..."
           />
-          <button type="submit">{mode == "add" ? "Submit" : "Edit"}</button>
+          <button type="submit" className="submit-button">{mode == "add" ? "Submit" : "Edit"}</button>
         </form>
       </div>
-      <div>
+      <div className="list-container">
         {items.map((item, index) => {
           return (
             <Item
@@ -101,7 +98,7 @@ function App() {
           );
         })}
       </div>
-      <button type="button" onClick={() => setItems([])}>
+      <button type="button" className="clear-button" onClick={() => setItems([])}>
         Clear All
       </button>
     </div>
