@@ -9,6 +9,10 @@ h1 {
   font-size: 30px !important;
 }
 
+h2 {
+  flex: 1;
+}
+
 body {
   margin: 0;
   display: flex;
