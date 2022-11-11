@@ -1,0 +1,7 @@
+.alert-container {
+    background-color: rgb(217, 182, 237);
+    padding: 1rem;
+    border-radius: 0.6rem;
+    width: 100%;
+    text-align: center;
+}
